@@ -2,8 +2,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from data_handler import read_data
 
 
-class KNNClassifier():
+class KNNClassifier(KNeighborsClassifier):
     def __init__(self, X, y, n_neighbors):
+        super().__init__()
         self.X = X
         self.y = y
         self.n_neighbors = n_neighbors
